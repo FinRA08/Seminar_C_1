@@ -12,7 +12,7 @@ Console.Write("Введите второе число - ");
 int numberB = Convert.ToInt32(Console.ReadLine());
 if (numberA == numberB * numberB)
 {
-    Console.WriteLine($"Да, {numberA} является квадратом числа {numberA}");
+    Console.WriteLine($"Да, {numberA} является квадратом числа {numberB}");
 }
 else
 {
