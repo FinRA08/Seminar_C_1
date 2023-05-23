@@ -14,9 +14,8 @@ if (number > 1)
         if (count % 2 == 0)
     {
         Console.Write($"{count}, ");
-        count++;
     }
-    else count++;
+    count++;
     }
 }
 else Console.WriteLine("Некоректный ввод, число должно быть > 1");
