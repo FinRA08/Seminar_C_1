@@ -17,13 +17,12 @@ else Console.WriteLine("Ввудено не коректное число, не�
 
 
 
-bool DefinitionOfADayOff (int days)
+string DefinitionOfADayOff (int days)
 {
     if (days >= 1 && days <=5)
     {
-        Console.WriteLine("нет");
-        return false;
+        return "нет";
     }
-    else Console.WriteLine("да");
-    return true;
+    else return "да";
+    
 }
