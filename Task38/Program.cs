@@ -45,11 +45,20 @@ double MinValue (double[] arr)
     return min;
 }
 
-double[] array = CreateArrayRndInt(5, 0, 100);
+double DifferenceMaxMin(double max, double min, int round = 2)
+{
+    double sum = 0;
+    if (min < 0) min = min * -1;
+    sum = max - min;
+    sum = Math.Round(sum, round);
+    return sum;
+}
+
+double[] array = CreateArrayRndInt(5, -100, 100);
 PrintArray(array);
 double maxValue = MaxValue(array);
 Console.WriteLine($"Максимальное значение массива - {maxValue}");
 double minValue = MinValue(array);
 Console.WriteLine($"Минимальное значение массива - {minValue}");
-double differenceMaxMin = maxValue - minValue;
+double differenceMaxMin = DifferenceMaxMin(maxValue, minValue);
 Console.WriteLine($"Разница между максимальным значением и минимальным значением составляет - {differenceMaxMin}");
