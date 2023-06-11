@@ -11,7 +11,7 @@ if (number >= 100 && number <= 999)
 {
     int myresilt = ReflectionOfTheSecondNumber(number);
     Console.WriteLine(myresilt);
-
+    
 }
 else Console.WriteLine("Введено не корректное число, программа принимает на вход только трухзначное число");
 
