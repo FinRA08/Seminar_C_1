@@ -48,8 +48,8 @@ int[] EnteringNumber()
 void DeterminingValueElem (int[,] matrix, int[] arr)
 {
     if(arr[0] < 0 || arr[1] < 0) Console.WriteLine("Введено не верное значение строки или столбца - значение не может быть отрицательным");
-    if(arr[0] == matrix.GetLength(0) && arr[1] == matrix.GetLength(1)) Console.WriteLine($"Позиция {arr[0]}, {arr[1]} содержит значение -> {matrix[arr[0],arr[1]]}");
-    if(arr[0] > matrix.GetLength(0) || arr[1] > matrix.GetLength(1)) Console.WriteLine($"Позиция {arr[0]}, {arr[1]} -> такого эоемента в массиве нет");
+    if(arr[0] >= matrix.GetLength(0) || arr[1] >= matrix.GetLength(1)) Console.WriteLine($"Позиция {arr[0]}, {arr[1]} -> такого элемента в массиве нет");
+    else Console.WriteLine($"Позиция {arr[0]}, {arr[1]} содержит значение -> {matrix[arr[0],arr[1]]}");
 }
 
 int[,] array2d = CreateMatrixRndInt(3, 4, -10, 10);
