@@ -48,7 +48,8 @@ void CalculArithmeticMean(int[,] matrix, int round = 2)
         }
         totalmean = sum / count;
         totalmean = Math.Round(totalmean, round);
-        Console.Write($"{totalmean}; ");
+        if (j < matrix.GetLength(1) - 1) Console.Write($"{totalmean}; ");
+        else Console.Write($"{totalmean}.");
         count = 0;
         totalmean = 0;
         sum = 0;
