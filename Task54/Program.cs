@@ -38,18 +38,23 @@ void SortMatrix (int[,] matrix)
 {
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
-        for (int j = 1; j < matrix.GetLength(1); j++)
+        for (int j = 0; j < matrix.GetLength(1) - 1; j++)
         {
-            for (int s = 0; s < matrix.GetLength(1); s++)
-            if(matrix[i,j] > matrix[i,j +1 ])
+           for (int s = j; s < matrix.GetLength(1) - 1; s++)
             {
+                if(matrix[i,j] > matrix[i,j +1])
+                {
                 int x = matrix[i,j];
-                matrix[i,j] = matrix[i,j +1 ];
-                matrix[i,j +1 ] = x;
-                
+                matrix[i,j] = matrix[i,j +1];
+                matrix[i,j +1] = x;
+                }
             }
         }
     }
 }
 
-
+int[,] array2d = CreateMatrixRndInt(4, 4, 1, 10);
+PrintMatrix(array2d);
+Console.WriteLine();
+SortMatrix(array2d);
+PrintMatrix(array2d);
